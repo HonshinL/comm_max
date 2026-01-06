@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant TimerP as Producer Timer (500ms)
+    participant Producer as ProducerNode
+    participant RingBuffer as RingBuffer 单例
+    participant TimerC as Consumer Timer (1000ms)
+    participant Consumer as ConsumerNode
+
+    TimerP->>Producer: 触发 produce()
+    Producer->>RingBuffer: push(counter)
+
+    TimerC->>Consumer: 触发 consume()
+    Consumer->>RingBuffer: pop()
+    Consumer->>Consumer: 输出日志

@@ -1,0 +1,62 @@
+%% 无锁队列工作流程
+flowchart TD
+    %% 定义节点样式
+    classDef mainStyle fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef producerStyle fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef consumerStyle fill:#bfb,stroke:#333,stroke-width:2px;
+    classDef operationStyle fill:#ffc,stroke:#333,stroke-width:2px;
+    classDef conditionStyle fill:#fbb,stroke:#333,stroke-width:2px;
+    
+    %% 主程序流程
+    subgraph MainProgram["主程序流程"]
+        M1["程序启动"] --> M2["初始化ROS2节点"]
+        M2 --> M3["创建订阅者监听'chatter'话题"]
+        M3 --> M4["启动多线程执行器"]
+        M4 --> M5["启动消费者线程"]
+        M5 --> M6["执行器spin()循环"]
+        M6 --> M7["设置停止标志"]
+        M7 --> M8["等待消费者线程结束"]
+        M8 --> M9["关闭ROS2"]
+        M9 --> M10["程序退出"]
+    end
+    
+    %% 生产者流程
+    subgraph Producer["生产者流程 (回调函数)"]
+        P1["接收到ROS2消息"] --> P2["动态分配std::string内存"]
+        P2 --> P3["将消息数据复制到新分配的内存"]
+        P3 --> P4["调用shared_queue.push(data)"]
+        P4 --> P5{"推送是否成功？"}
+        P5 -- "是" --> P6["推送成功，继续等待下一条消息"]
+        P5 -- "否" --> P7["队列已满，打印错误信息"]
+        P7 --> P8["释放分配的内存"]
+        P8 --> P6
+    end
+    
+    %% 消费者流程
+    subgraph Consumer["消费者流程 (main_loop)"]
+        C1["检查停止标志"] --> C2{"是否停止？"}
+        C2 -- "否" --> C3["调用shared_queue.pop(data)"]
+        C3 --> C4{"弹出是否成功？"}
+        C4 -- "是" --> C5{"数据指针有效？"}
+        C5 -- "是" --> C6["输出消费的数据"]
+        C6 --> C7["释放数据内存"]
+        C7 --> C1
+        C5 -- "否" --> C1
+        C4 -- "否" --> C8["队列为空，休眠10毫秒"]
+        C8 --> C1
+        C2 -- "是" --> C9["线程结束"]
+    end
+    
+    %% 连接各部分
+    M6 -.-> P1
+    M5 -.-> C1
+    
+    %% 应用样式
+    class M1,M2,M3,M4,M5,M6,M7,M8,M9,M10 mainStyle;
+    class P1,P2,P3,P4,P5,P6,P7,P8 producerStyle;
+    class C1,C2,C3,C4,C5,C6,C7,C8,C9 consumerStyle;
+    
+    %% 设置连接线样式
+    linkStyle 0,1,2,3,4,5,6,7,8,9 stroke:#000000,stroke-width:2px;
+    linkStyle 10,11,12,13,14,15,16,17,18,19 stroke:#009933,stroke-width:2px;
+    linkStyle 20,21 stroke:#666666,stroke-width:1px;

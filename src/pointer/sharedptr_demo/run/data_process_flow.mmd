@@ -1,0 +1,86 @@
+%% 数据处理流程图
+flowchart TD
+    %% 定义节点样式
+    classDef mainStyle fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef rosStyle fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef threadStyle fill:#bfb,stroke:#333,stroke-width:2px;
+    classDef dataStyle fill:#fbb,stroke:#333,stroke-width:2px;
+    
+    %% 主流程
+    subgraph "主流程"["主流程"]
+        A["程序启动"] --> B["初始化ROS2节点"]
+        B --> C["创建订阅者订阅'chatter'话题"]
+        C --> D["启动多线程执行器"]
+        D --> E["启动消费者线程1"]
+        D --> F["启动消费者线程2"]
+        E --> G["执行器spin()循环"]
+        F --> G
+        G --> H["设置停止标志"]
+        H --> I["等待消费者线程结束"]
+        I --> J["关闭ROS2"]
+        J --> K["程序退出"]
+    end
+    
+    %% ROS2回调处理
+    subgraph "ROS2回调"["ROS2回调处理"]
+        CB1["接收到消息"] --> CB2["创建新的shared_ptr指向消息数据"]
+        CB2 --> CB3["加锁保护共享数据"]
+        CB3 --> CB4["更新全局shared_data"]
+        CB4 --> CB5["解锁"]
+        CB5 --> CB6["记录日志"]
+    end
+    
+    %% 消费者线程1处理
+    subgraph "消费者线程1"["消费者线程1处理"]
+        CT11["检查停止标志"] --> CT12{"是否停止？"}
+        CT12 -- "否" --> CT13["加锁保护共享数据"]
+        CT13 --> CT14["复制shared_ptr到本地"]
+        CT14 --> CT15["解锁"]
+        CT15 --> CT16{"本地副本有效？"}
+        CT16 -- "是" --> CT17["输出数据"]
+        CT16 -- "否" --> CT18["睡眠2秒"]
+        CT17 --> CT18
+        CT18 --> CT11
+        CT12 -- "是" --> CT19["线程结束"]
+    end
+    
+    %% 消费者线程2处理
+    subgraph "消费者线程2"["消费者线程2处理"]
+        CT21["检查停止标志"] --> CT22{"是否停止？"}
+        CT22 -- "否" --> CT23["加锁保护共享数据"]
+        CT23 --> CT24["复制shared_ptr到本地"]
+        CT24 --> CT25["解锁"]
+        CT25 --> CT26{"本地副本有效？"}
+        CT26 -- "是" --> CT27["输出数据"]
+        CT26 -- "否" --> CT28["睡眠2秒"]
+        CT27 --> CT28
+        CT28 --> CT21
+        CT22 -- "是" --> CT29["线程结束"]
+    end
+    
+    %% 数据流向
+    subgraph "数据流向"["数据流向"]
+        DS1["外部消息"] --> DS2["回调函数中的new_data"]
+        DS2 --> DS3["全局shared_data"]
+        DS3 --> DS4["消费者线程1的local_copy"]
+        DS3 --> DS5["消费者线程2的local_copy"]
+    end
+    
+    %% 连接各部分
+    G -.-> CB1
+    E -.-> CT11
+    F -.-> CT21
+    H -.-> CT12
+    H -.-> CT22
+    
+    %% 应用样式
+    class A,B,C,D,E,F,G,H,I,J,K mainStyle;
+    class CB1,CB2,CB3,CB4,CB5,CB6 rosStyle;
+    class CT11,CT12,CT13,CT14,CT15,CT16,CT17,CT18,CT19,CT21,CT22,CT23,CT24,CT25,CT26,CT27,CT28,CT29 threadStyle;
+    class DS1,DS2,DS3,DS4,DS5 dataStyle;
+    
+    %% 设置连接线样式
+    linkStyle 0,1,2,3,4,5,6,7,8 stroke:#000000,stroke-width:2px;
+    linkStyle 9,10,11,12,13,14,15,16,17,18,19,20 stroke:#666666,stroke-width:1px;
+    linkStyle 21,22,23 stroke:#009933,stroke-width:2px;
+    linkStyle 24,25 stroke:#FF6600,stroke-width:2px;

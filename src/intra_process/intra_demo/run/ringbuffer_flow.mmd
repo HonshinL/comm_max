@@ -1,0 +1,48 @@
+%% RingBuffer读写流程
+flowchart TD
+    %% 定义节点样式
+    classDef methodStyle fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef lockStyle fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef operationStyle fill:#bfb,stroke:#333,stroke-width:2px;
+    classDef conditionStyle fill:#ffc,stroke:#333,stroke-width:2px;
+    classDef returnStyle fill:#fbb,stroke:#333,stroke-width:2px;
+    
+    %% 写操作流程
+    subgraph WriteFlow["写操作流程 (push方法)"]
+        W1["调用 push(data)"] --> W2["加锁保护 (lock_guard)"]
+        W2 --> W3["将数据写入 buffer_[write_index_]"]
+        W3 --> W4["更新 write_index_ = (write_index_ + 1) % capacity_"]
+        W4 --> W5{"size_ < capacity_?"}
+        W5 -->|"是"| W6["增加 size_ 计数"]
+        W5 -->|"否"| W7["覆盖最旧数据：read_index_ = (read_index_ + 1) % capacity_"]
+        W6 --> W8["释放锁"]
+        W7 --> W8
+        W8 --> W9["方法返回"]
+    end
+    
+    %% 读操作流程
+    subgraph ReadFlow["读操作流程 (snapshot方法)"]
+        R1["调用 snapshot()"] --> R2["加锁保护 (lock_guard)"]
+        R2 --> R3["创建空的 result 向量"]
+        R3 --> R4["初始化循环变量 i = 0"]
+        R4 --> R5{"i < size_?"}
+        R5 -->|"是"| R6["计算 idx = (read_index_ + i) % capacity_"]
+        R6 --> R7["将 buffer_[idx] 放入 result 向量"]
+        R7 --> R8["i 自增 1"]
+        R8 --> R5
+        R5 -->|"否"| R9["返回 result 向量"]
+        R9 --> R10["释放锁"]
+        R10 --> R11["方法返回"]
+    end
+    
+    %% 应用样式
+    class W1,R1 methodStyle;
+    class W2,W8,R2,R10 lockStyle;
+    class W3,W4,W6,W7,R3,R4,R6,R7,R8 operationStyle;
+    class W5,R5 conditionStyle;
+    class W9,R11 returnStyle;
+    
+    %% 设置连接线样式
+    linkStyle 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 stroke:#000000,stroke-width:2px;
+    linkStyle 5,11 stroke:#009933,stroke-width:2px;
+    linkStyle 6,12 stroke:#FF6600,stroke-width:2px;

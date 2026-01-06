@@ -1,0 +1,19 @@
+<package format="3">
+  <name>pub_demo</name>
+  <version>0.0.1</version>
+  <description>Publisher demo component with intra-process comms</description>
+  <maintainer email="chris@example.com">Chris</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <rclcpp_components/>
+  </export>
+
+</package>
