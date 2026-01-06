@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>prod_and_coms</name>
+  <name>ringbuffer_timer</name>
   <version>0.0.1</version>
   <description>Producer and Consumer nodes using ringbuffer_lib</description>
   <maintainer email="chris@example.com">Chris</maintainer>

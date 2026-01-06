@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(prod_and_coms)
+project(ringbuffer_timer)
 
 # 默认使用 C++17
 if(NOT CMAKE_CXX_STANDARD)

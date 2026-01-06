@@ -1,6 +1,6 @@
 #include "rclcpp/rclcpp.hpp"
-#include "prod_and_coms/producer_node.hpp"
-#include "prod_and_coms/consumer_node.hpp"
+#include "ringbuffer_timer/producer_node.hpp"
+#include "ringbuffer_timer/consumer_node.hpp"
 
 int main(int argc, char* argv[]) {
     rclcpp::init(argc, argv);
