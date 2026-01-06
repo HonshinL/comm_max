@@ -1,0 +1,22 @@
+sequenceDiagram
+    participant Producer as ProducerNode / DMA
+    participant Back as Back Buffer
+    participant Flag as Dirty 标志
+    participant Consumer as ConsumerNode
+    participant Front as Front Buffer
+
+    Producer->>Back: 写入数据 (back buffer)
+    Back->>Flag: 设置 dirty = true (内部状态)
+
+    Producer->>Consumer: 发布 tick 消息 (外部通知)
+
+    Consumer->>Front: 读取 front 缓冲区 (稳定数据)
+    Consumer->>Flag: 检查 dirty 标志
+    alt dirty = true
+        Consumer->>Back: 调用 swap()
+        Back->>Front: front/back 交换
+        Flag->>Flag: dirty = false
+        Consumer->>Consumer: 使用最新 front 数据
+    else dirty = false
+        Consumer->>Consumer: 保持原 front，不切换
+    end

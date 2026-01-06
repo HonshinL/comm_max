@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(ringbuffer_launch)
+project(bringup_launch)
 
 find_package(ament_cmake REQUIRED)
 

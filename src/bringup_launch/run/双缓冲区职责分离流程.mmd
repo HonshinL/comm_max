@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant Producer as ProducerNode
+    participant Back as Back Buffer
+    participant Front as Front Buffer
+    participant Consumer as ConsumerNode
+
+    Producer->>Back: write(data) → 写入 back 缓冲区
+    Note right of Back: 最新数据写入<br/>dirty = true
+
+    Producer->>Consumer: 发布 tick 消息 (通知消费者)
+
+    Consumer->>Front: read() → 读取 front 缓冲区
+    Note right of Front: 保持稳定数据<br/>未受写入影响
+
+    Consumer->>Back: swap() 请求交换
+    Back->>Front: front ↔ back 切换
+    Note right of Front: 最新 back 成为新的 front<br/>dirty = false
+
+    Consumer->>Consumer: 使用最新 front 数据

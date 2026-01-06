@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant DMA as 数据采集卡(DMA)
+    participant Back as Back Buffer
+    participant Front as Front Buffer
+    participant Disk as 磁盘写线程
+
+    DMA->>Back: 连续采样数据写入 back
+    Note right of Back: back 缓冲区填充中
+
+    DMA->>Front: swap() 触发 front/back 交换
+    Note right of Front: front 获得完整数据块
+
+    Disk->>Front: 读取 front 缓冲区
+    Disk->>Disk: 写入磁盘文件 (落盘)
+
+    DMA->>Back: 开始写入下一批数据

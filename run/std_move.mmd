@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant App as 应用代码
+    participant Pub as Publisher
+    participant ROS as ROS2 内部队列
+    participant Sub as Subscriber
+
+    App->>App: 创建 std::unique_ptr<Msg>
+    App->>Pub: 调用 publish(std::move(msg))
+    Note right of Pub: 所有权转移<br/>msg 变为 nullptr
+    Pub->>ROS: 将消息指针交给 ROS2
+    ROS->>Sub: 直接传递指针 (零拷贝)
+    Sub->>Sub: 使用消息数据
