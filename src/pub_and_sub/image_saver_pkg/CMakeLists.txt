@@ -32,7 +32,19 @@ ament_target_dependencies(image_saver
   cv_bridge
   OpenCV)
 
-install(TARGETS image_saver 
+add_executable(image_sub_with_stamp src/image_sub_with_stamp.cpp)
+target_include_directories(image_sub_with_stamp
+  PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
+ament_target_dependencies(image_sub_with_stamp 
+  rclcpp
+  sensor_msgs)
+
+install(TARGETS image_saver image_sub_with_stamp
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY include/ DESTINATION include/ )
 
 ament_package()

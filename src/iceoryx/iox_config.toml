@@ -1,0 +1,16 @@
+[general]
+version = 1
+
+[[segment]]
+size = 209715200   # 总内存池大小 200 MB
+id = 1
+
+# 小块池，先定义
+[[segment.mempool]]
+size = 1024        # 1 KB
+count = 1000
+
+# 大块池，后定义
+[[segment.mempool]]
+size = 8388608     # 8 MB
+count = 25

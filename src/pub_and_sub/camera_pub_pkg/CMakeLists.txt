@@ -24,14 +24,21 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-add_executable(camera_publisher src/camera_publisher.cpp)
-ament_target_dependencies(camera_publisher
+add_executable(camera_pub src/camera_pub.cpp)
+ament_target_dependencies(camera_pub
   rclcpp
   sensor_msgs
   cv_bridge
   OpenCV)
 
-install(TARGETS camera_publisher 
+add_executable(camera_pub_with_stamp src/camera_pub_with_stamp.cpp)
+ament_target_dependencies(camera_pub_with_stamp
+  rclcpp
+  sensor_msgs)
+
+install(TARGETS 
+  camera_pub
+  camera_pub_with_stamp
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

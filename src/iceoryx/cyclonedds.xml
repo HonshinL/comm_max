@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CycloneDDS xmlns="https://cdds.io/config">
+  <Domain id="any">
+    <SharedMemory>
+      <!-- 启用共享内存 -->
+      <Enable>true</Enable>
+      <!-- 内存池总大小：200 MB -->
+      <Size>209715200</Size>
+      <!-- 单个块大小：8 MB，足够容纳一帧图像 -->
+      <BlockSize>8388608</BlockSize>
+      <!-- 最大消息大小：8 MB -->
+      <MaxMessageSize>8388608</MaxMessageSize>
+    </SharedMemory>
+  </Domain>
+</CycloneDDS>
