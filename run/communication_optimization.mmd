@@ -1,0 +1,91 @@
+%% 通信优化方式对比图
+flowchart TD
+    %% 定义节点样式
+    classDef optimization fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef feature fill:#bbf,stroke:#333,stroke-width:1px;
+    classDef advantage fill:#bfb,stroke:#333,stroke-width:1px;
+
+    %% 主节点
+    A["通信优化方式"]:::optimization
+
+    %% 子图：进程内通信优化
+    subgraph intra_process ["进程内通信优化"]
+        A1["use_intra_process_comms(true)"]:::feature
+        A2["std::move(msg)"]:::feature
+        A3["直接指针传递"]:::feature
+        A4["减少消息拷贝"]:::advantage
+        A5["提高通信效率"]:::advantage
+        
+        A1 --> A3
+        A2 --> A3
+        A3 --> A4
+        A3 --> A5
+    end
+
+    %% 子图：共享指针
+    subgraph shared_ptr ["共享指针"]
+        B1["std::shared_ptr"]:::feature
+        B2["引用计数管理"]:::feature
+        B3["std::mutex"]:::feature
+        B4["避免数据拷贝"]:::advantage
+        B5["自动内存管理"]:::advantage
+        
+        B1 --> B2
+        B1 --> B3
+        B2 --> B4
+        B2 --> B5
+        B3 --> B5
+    end
+
+    %% 子图：条件变量
+    subgraph condition_var ["条件变量"]
+        C1["std::condition_variable"]:::feature
+        C2["生产者-消费者模型"]:::feature
+        C3["cv.notify_one()"]:::feature
+        C4["避免忙等待"]:::advantage
+        C5["提高CPU利用率"]:::advantage
+        
+        C1 --> C2
+        C1 --> C3
+        C2 --> C4
+        C3 --> C5
+    end
+
+    %% 子图：无锁队列
+    subgraph lock_free_queue ["无锁队列"]
+        D1["boost::lockfree::queue"]:::feature
+        D2["原子操作"]:::feature
+        D3["内存管理"]:::feature
+        D4["避免互斥锁开销"]:::advantage
+        D5["高并发性能"]:::advantage
+        
+        D1 --> D2
+        D1 --> D3
+        D2 --> D4
+        D2 --> D5
+    end
+
+    %% 子图：环形缓冲区
+    subgraph ring_buffer ["环形缓冲区"]
+        E1["RingBuffer类"]:::feature
+        E2["固定大小缓冲区"]:::feature
+        E3["循环索引"]:::feature
+        E4["高效FIFO传输"]:::advantage
+        E5["内存复用"]:::advantage
+        
+        E1 --> E2
+        E1 --> E3
+        E2 --> E4
+        E2 --> E5
+    end
+
+    %% 主节点连接到各个子图
+    A --> intra_process
+    A --> shared_ptr
+    A --> condition_var
+    A --> lock_free_queue
+    A --> ring_buffer
+
+    %% 设置连接线样式
+    linkStyle 0,1,2,3,4 stroke:#0066cc,stroke-width:2px;
+    linkStyle 5,6,7,8,9,10,11,12,13,14 stroke:#009933,stroke-width:1px;
