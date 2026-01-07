@@ -6,8 +6,11 @@ class ImageSubscriber : public rclcpp::Node {
 public:
   ImageSubscriber() : Node("image_subscriber") {
     using sensor_msgs::msg::Image;
-    rclcpp::QoS qos(10);
-    qos.reliable();
+    
+    rclcpp::QoS qos(rclcpp::KeepLast(1));
+    qos.best_effort();          // 不重传，降低延迟
+    qos.durability_volatile();  // 不保留历史
+
     sub_ = this->create_subscription<Image>(
       "big_image", qos,
       [this](const Image::SharedPtr msg) { on_frame(msg); });

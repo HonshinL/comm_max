@@ -1,40 +1,43 @@
-[INFO] [1767688119.694481477] [image_subscriber]: Latency avg: 7.76 ms | FPS: 31.3 | Throughput: 185.47 MB/s | Size: 5.93 MB | CPU: 15.7564% | Mem: 31.3047 MB | Threads: 9
-[INFO] [1767688120.721086681] [image_subscriber]: Latency avg: 7.87 ms | FPS: 30.2 | Throughput: 179.13 MB/s | Size: 5.93 MB | CPU: 13.449% | Mem: 31.4297 MB | Threads: 9
-[INFO] [1767688121.740116727] [image_subscriber]: Latency avg: 7.66 ms | FPS: 30.4 | Throughput: 180.47 MB/s | Size: 5.93 MB | CPU: 13.1769% | Mem: 31.4297 MB | Threads: 9
-[INFO] [1767688122.770962880] [image_subscriber]: Latency avg: 6.68 ms | FPS: 30.1 | Throughput: 178.41 MB/s | Size: 5.93 MB | CPU: 13.5303% | Mem: 31.4297 MB | Threads: 9
-[INFO] [1767688123.789940061] [image_subscriber]: Latency avg: 7.86 ms | FPS: 30.4 | Throughput: 180.49 MB/s | Size: 5.93 MB | CPU: 12.9598% | Mem: 31.4297 MB | Threads: 9
-[INFO] [1767688124.808871305] [image_subscriber]: Latency avg: 8.98 ms | FPS: 30.4 | Throughput: 180.49 MB/s | Size: 5.93 MB | CPU: 14.0934% | Mem: 39.8047 MB | Threads: 9
-[INFO] [1767688125.832031858] [image_subscriber]: Latency avg: 6.80 ms | FPS: 30.3 | Throughput: 179.75 MB/s | Size: 5.93 MB | CPU: 12.7283% | Mem: 39.8047 MB | Threads: 9
-[INFO] [1767688126.859133383] [image_subscriber]: Latency avg: 127.12 ms | FPS: 27.3 | Throughput: 161.73 MB/s | Size: 5.93 MB | CPU: 21.7011% | Mem: 39.9141 MB | Threads: 9
-[INFO] [1767688127.878099774] [image_subscriber]: Latency avg: 6.95 ms | FPS: 30.4 | Throughput: 180.49 MB/s | Size: 5.93 MB | CPU: 13.1455% | Mem: 39.9141 MB | Threads: 9
-[INFO] [1767688128.901315939] [image_subscriber]: Latency avg: 7.70 ms | FPS: 30.3 | Throughput: 179.74 MB/s | Size: 5.93 MB | CPU: 13.0317% | Mem: 39.9141 MB | Threads: 9
-[INFO] [1767688129.924435013] [image_subscriber]: Latency avg: 7.01 ms | FPS: 30.3 | Throughput: 179.76 MB/s | Size: 5.93 MB | CPU: 12.7612% | Mem: 39.9141 MB | Threads: 9
-[INFO] [1767688130.947299945] [image_subscriber]: Latency avg: 8.39 ms | FPS: 30.3 | Throughput: 179.80 MB/s | Size: 5.93 MB | CPU: 13.5195% | Mem: 34.0508 MB | Threads: 9
-[INFO] [1767688131.970266724] [image_subscriber]: Latency avg: 8.38 ms | FPS: 30.3 | Throughput: 179.78 MB/s | Size: 5.93 MB | CPU: 13.3173% | Mem: 34.0508 MB | Threads: 9
-[INFO] [1767688132.997651154] [image_subscriber]: Latency avg: 128.36 ms | FPS: 27.3 | Throughput: 161.69 MB/s | Size: 5.93 MB | CPU: 22.4426% | Mem: 34.1562 MB | Threads: 9
-[INFO] [1767688134.020391923] [image_subscriber]: Latency avg: 7.41 ms | FPS: 30.3 | Throughput: 179.82 MB/s | Size: 5.93 MB | CPU: 12.8916% | Mem: 34.1562 MB | Threads: 9
-[INFO] [1767688135.042962392] [image_subscriber]: Latency avg: 125.85 ms | FPS: 27.4 | Throughput: 162.46 MB/s | Size: 5.93 MB | CPU: 21.3024% | Mem: 42.5625 MB | Threads: 9
-[INFO] [1767688136.061930275] [image_subscriber]: Latency avg: 7.35 ms | FPS: 30.4 | Throughput: 180.48 MB/s | Size: 5.93 MB | CPU: 13.353% | Mem: 42.5625 MB | Threads: 9
-[INFO] [1767688137.088839165] [image_subscriber]: Latency avg: 6.97 ms | FPS: 30.2 | Throughput: 179.09 MB/s | Size: 5.93 MB | CPU: 12.7563% | Mem: 42.5625 MB | Threads: 9
-[INFO] [1767688138.107919566] [image_subscriber]: Latency avg: 8.06 ms | FPS: 30.4 | Throughput: 180.47 MB/s | Size: 5.93 MB | CPU: 13.3981% | Mem: 34.2539 MB | Threads: 9
-[INFO] [1767688139.135423421] [image_subscriber]: Latency avg: 7.56 ms | FPS: 30.2 | Throughput: 179.00 MB/s | Size: 5.93 MB | CPU: 12.8188% | Mem: 34.2539 MB | Threads: 9
-[INFO] [1767688140.153934070] [image_subscriber]: Latency avg: 7.62 ms | FPS: 30.4 | Throughput: 180.56 MB/s | Size: 5.93 MB | CPU: 12.8767% | Mem: 34.2539 MB | Threads: 9
-[INFO] [1767688141.181087109] [image_subscriber]: Latency avg: 142.77 ms | FPS: 29.2 | Throughput: 173.27 MB/s | Size: 5.93 MB | CPU: 21.4036% | Mem: 34.2344 MB | Threads: 9
-[INFO] [1767688142.200025147] [image_subscriber]: Latency avg: 7.05 ms | FPS: 30.4 | Throughput: 180.49 MB/s | Size: 5.93 MB | CPU: 13.2659% | Mem: 34.2344 MB | Threads: 9
-[INFO] [1767688143.226737072] [image_subscriber]: Latency avg: 128.68 ms | FPS: 28.2 | Throughput: 167.57 MB/s | Size: 5.93 MB | CPU: 20.8499% | Mem: 34.0078 MB | Threads: 9
-[INFO] [1767688144.245969805] [image_subscriber]: Latency avg: 5.32 ms | FPS: 30.4 | Throughput: 180.44 MB/s | Size: 5.93 MB | CPU: 12.8288% | Mem: 34.0078 MB | Threads: 9
-[INFO] [1767688145.269152620] [image_subscriber]: Latency avg: 7.91 ms | FPS: 30.3 | Throughput: 179.74 MB/s | Size: 5.93 MB | CPU: 13.0442% | Mem: 34.0078 MB | Threads: 9
-[INFO] [1767688146.291859688] [image_subscriber]: Latency avg: 6.86 ms | FPS: 30.3 | Throughput: 179.83 MB/s | Size: 5.93 MB | CPU: 13.0006% | Mem: 34.0078 MB | Threads: 9
-[INFO] [1767688147.319075938] [image_subscriber]: Latency avg: 6.84 ms | FPS: 30.2 | Throughput: 179.04 MB/s | Size: 5.93 MB | CPU: 12.8691% | Mem: 34.0078 MB | Threads: 9
-[INFO] [1767688148.341892971] [image_subscriber]: Latency avg: 9.17 ms | FPS: 30.3 | Throughput: 179.81 MB/s | Size: 5.93 MB | CPU: 14.1616% | Mem: 34.9805 MB | Threads: 9
-[INFO] [1767688149.360900996] [image_subscriber]: Latency avg: 46.63 ms | FPS: 30.4 | Throughput: 180.48 MB/s | Size: 5.93 MB | CPU: 16.2388% | Mem: 40.0312 MB | Threads: 9
-[INFO] [1767688150.384036150] [image_subscriber]: Latency avg: 52.68 ms | FPS: 30.3 | Throughput: 179.75 MB/s | Size: 5.93 MB | CPU: 18.4161% | Mem: 34.0977 MB | Threads: 9
-[INFO] [1767688151.407675660] [image_subscriber]: Latency avg: 6.63 ms | FPS: 30.3 | Throughput: 179.66 MB/s | Size: 5.93 MB | CPU: 12.8465% | Mem: 34.0977 MB | Threads: 9
-[INFO] [1767688152.434009272] [image_subscriber]: Latency avg: 8.65 ms | FPS: 30.2 | Throughput: 179.19 MB/s | Size: 5.93 MB | CPU: 13.0183% | Mem: 34.0977 MB | Threads: 9
-[INFO] [1767688153.453674454] [image_subscriber]: Latency avg: 8.92 ms | FPS: 30.4 | Throughput: 180.36 MB/s | Size: 5.93 MB | CPU: 13.593% | Mem: 34.0977 MB | Threads: 9
-[INFO] [1767688154.655414352] [image_subscriber]: Latency avg: 152.71 ms | FPS: 20.0 | Throughput: 118.48 MB/s | Size: 5.93 MB | CPU: 16.9881% | Mem: 61.6172 MB | Threads: 9
-[INFO] [1767688155.801868086] [image_subscriber]: Latency avg: 206.45 ms | FPS: 24.4 | Throughput: 144.89 MB/s | Size: 5.93 MB | CPU: 23.008% | Mem: 78.8203 MB | Threads: 9
-[INFO] [1767688156.818800645] [image_subscriber]: Latency avg: 128.43 ms | FPS: 37.4 | Throughput: 221.69 MB/s | Size: 5.93 MB | CPU: 22.7535% | Mem: 77.918 MB | Threads: 9
-[INFO] [1767688157.842007384] [image_subscriber]: Latency avg: 8.68 ms | FPS: 30.3 | Throughput: 179.74 MB/s | Size: 5.93 MB | CPU: 12.8327% | Mem: 77.918 MB | Threads: 9
-[INFO] [1767688158.865153009] [image_subscriber]: Latency avg: 7.92 ms | FPS: 30.3 | Throughput: 179.75 MB/s | Size: 5.93 MB | CPU: 13.22% | Mem: 79.168 MB | Threads: 9
-[INFO] [1767688159.892518377] [image_subscriber]: Latency avg: 7.63 ms | FPS: 30.2 | Throughput: 179.01 MB/s | Size: 5.93 MB | CPU: 13.0323% | Mem: 79.168 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691639.358001279] [image_saver]: Latency avg: 7.99 ms | FPS: 48.7 | Throughput: 289.19 MB/s | Size: 5.93 MB | CPU: 36.6087% | Mem: 95.1992 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691640.374025820] [image_saver]: Latency avg: 7.38 ms | FPS: 85.6 | Throughput: 507.97 MB/s | Size: 5.93 MB | CPU: 44.0707% | Mem: 97.6992 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691641.376402160] [image_saver]: Latency avg: 7.66 ms | FPS: 96.8 | Throughput: 574.09 MB/s | Size: 5.93 MB | CPU: 46.1425% | Mem: 98.8242 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691642.387176169] [image_saver]: Latency avg: 7.91 ms | FPS: 77.2 | Throughput: 457.80 MB/s | Size: 5.93 MB | CPU: 41.2708% | Mem: 98.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691643.388578219] [image_saver]: Latency avg: 7.12 ms | FPS: 108.8 | Throughput: 645.77 MB/s | Size: 5.93 MB | CPU: 47.2522% | Mem: 99.5742 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691644.400299070] [image_saver]: Latency avg: 7.12 ms | FPS: 89.0 | Throughput: 527.75 MB/s | Size: 5.93 MB | CPU: 42.4609% | Mem: 99.5742 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691645.401623043] [image_saver]: Latency avg: 7.43 ms | FPS: 97.9 | Throughput: 580.62 MB/s | Size: 5.93 MB | CPU: 44.4929% | Mem: 99.5742 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691646.422996453] [image_saver]: Latency avg: 7.29 ms | FPS: 88.1 | Throughput: 522.75 MB/s | Size: 5.93 MB | CPU: 42.186% | Mem: 99.5742 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691647.435724071] [image_saver]: Latency avg: 7.16 ms | FPS: 86.9 | Throughput: 515.53 MB/s | Size: 5.93 MB | CPU: 41.239% | Mem: 99.6992 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691648.438732166] [image_saver]: Latency avg: 6.85 ms | FPS: 52.8 | Throughput: 313.48 MB/s | Size: 5.93 MB | CPU: 29.7997% | Mem: 99.6992 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691649.448070651] [image_saver]: Latency avg: 7.40 ms | FPS: 90.2 | Throughput: 534.89 MB/s | Size: 5.93 MB | CPU: 42.9184% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691650.454465883] [image_saver]: Latency avg: 7.01 ms | FPS: 70.5 | Throughput: 418.54 MB/s | Size: 5.93 MB | CPU: 34.635% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691651.462053322] [image_saver]: Latency avg: 7.41 ms | FPS: 98.3 | Throughput: 582.90 MB/s | Size: 5.93 MB | CPU: 44.7857% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691652.463491060] [image_saver]: Latency avg: 7.40 ms | FPS: 103.9 | Throughput: 616.10 MB/s | Size: 5.93 MB | CPU: 46.2278% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691653.482257552] [image_saver]: Latency avg: 7.21 ms | FPS: 88.3 | Throughput: 524.11 MB/s | Size: 5.93 MB | CPU: 42.7136% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691654.497948590] [image_saver]: Latency avg: 6.97 ms | FPS: 108.3 | Throughput: 642.50 MB/s | Size: 5.93 MB | CPU: 46.0172% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691655.503988833] [image_saver]: Latency avg: 7.49 ms | FPS: 105.4 | Throughput: 625.08 MB/s | Size: 5.93 MB | CPU: 47.7828% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691656.511035466] [image_saver]: Latency avg: 7.35 ms | FPS: 104.3 | Throughput: 618.56 MB/s | Size: 5.93 MB | CPU: 47.1264% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691657.513354219] [image_saver]: Latency avg: 7.54 ms | FPS: 96.8 | Throughput: 574.13 MB/s | Size: 5.93 MB | CPU: 45.65% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691658.523929445] [image_saver]: Latency avg: 7.15 ms | FPS: 89.1 | Throughput: 528.35 MB/s | Size: 5.93 MB | CPU: 40.4446% | Mem: 99.9492 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691659.526163762] [image_saver]: Latency avg: 7.15 ms | FPS: 83.8 | Throughput: 497.23 MB/s | Size: 5.93 MB | CPU: 39.6949% | Mem: 100.074 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691660.544246484] [image_saver]: Latency avg: 7.07 ms | FPS: 88.4 | Throughput: 524.45 MB/s | Size: 5.93 MB | CPU: 41.8023% | Mem: 100.074 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691661.559980703] [image_saver]: Latency avg: 7.57 ms | FPS: 96.5 | Throughput: 572.39 MB/s | Size: 5.93 MB | CPU: 45.9763% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691662.562084841] [image_saver]: Latency avg: 7.70 ms | FPS: 93.8 | Throughput: 556.49 MB/s | Size: 5.93 MB | CPU: 45.6561% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691663.580334571] [image_saver]: Latency avg: 7.12 ms | FPS: 99.2 | Throughput: 588.45 MB/s | Size: 5.93 MB | CPU: 45.8402% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691664.596196811] [image_saver]: Latency avg: 6.95 ms | FPS: 102.4 | Throughput: 607.36 MB/s | Size: 5.93 MB | CPU: 47.1714% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691665.600119491] [image_saver]: Latency avg: 7.63 ms | FPS: 58.8 | Throughput: 348.65 MB/s | Size: 5.93 MB | CPU: 29.6721% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691666.609227095] [image_saver]: Latency avg: 7.54 ms | FPS: 81.3 | Throughput: 482.10 MB/s | Size: 5.93 MB | CPU: 40.1583% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691667.611375698] [image_saver]: Latency avg: 7.38 ms | FPS: 104.8 | Throughput: 621.59 MB/s | Size: 5.93 MB | CPU: 47.251% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691668.622191342] [image_saver]: Latency avg: 7.42 ms | FPS: 104.9 | Throughput: 622.13 MB/s | Size: 5.93 MB | CPU: 47.147% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691669.624283091] [image_saver]: Latency avg: 7.48 ms | FPS: 103.8 | Throughput: 615.70 MB/s | Size: 5.93 MB | CPU: 47.1368% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691670.636097253] [image_saver]: Latency avg: 7.00 ms | FPS: 100.8 | Throughput: 598.06 MB/s | Size: 5.93 MB | CPU: 45.0854% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691671.636428166] [image_saver]: Latency avg: 7.21 ms | FPS: 99.0 | Throughput: 587.13 MB/s | Size: 5.93 MB | CPU: 45.1697% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691672.647988990] [image_saver]: Latency avg: 7.27 ms | FPS: 88.0 | Throughput: 521.97 MB/s | Size: 5.93 MB | CPU: 42.3214% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691673.649558373] [image_saver]: Latency avg: 6.91 ms | FPS: 112.8 | Throughput: 669.34 MB/s | Size: 5.93 MB | CPU: 46.0479% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691674.661515426] [image_saver]: Latency avg: 7.56 ms | FPS: 94.9 | Throughput: 562.80 MB/s | Size: 5.93 MB | CPU: 45.008% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691675.663228621] [image_saver]: Latency avg: 7.17 ms | FPS: 100.8 | Throughput: 598.17 MB/s | Size: 5.93 MB | CPU: 46.4437% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691676.674241115] [image_saver]: Latency avg: 7.52 ms | FPS: 97.9 | Throughput: 580.94 MB/s | Size: 5.93 MB | CPU: 45.7803% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691677.676240875] [image_saver]: Latency avg: 7.38 ms | FPS: 107.8 | Throughput: 639.44 MB/s | Size: 5.93 MB | CPU: 48.3333% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691678.687532610] [image_saver]: Latency avg: 7.55 ms | FPS: 93.0 | Throughput: 551.44 MB/s | Size: 5.93 MB | CPU: 44.9014% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691679.689095276] [image_saver]: Latency avg: 7.28 ms | FPS: 103.8 | Throughput: 616.03 MB/s | Size: 5.93 MB | CPU: 46.2697% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691680.700284216] [image_saver]: Latency avg: 7.13 ms | FPS: 86.0 | Throughput: 510.43 MB/s | Size: 5.93 MB | CPU: 42.0802% | Mem: 100.199 MB | Threads: 9
+[image_sub_with_stamp-3] [INFO] [1767691681.702454265] [image_saver]: Latency avg: 7.48 ms | FPS: 104.8 | Throughput: 621.57 MB/s | Size: 5.93 MB | CPU: 47.4934% | Mem: 100.199 MB | Threads: 9

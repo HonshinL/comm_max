@@ -7,8 +7,11 @@ public:
   : Node("image_publisher"),
     width_(1920), height_(1080), channels_(3), fps_(30) {
     using sensor_msgs::msg::Image;
-    rclcpp::QoS qos(10);
-    qos.reliable();
+    
+    rclcpp::QoS qos(rclcpp::KeepLast(1));
+    qos.best_effort();   // 不重传，降低延迟
+    qos.durability_volatile(); // 不保留历史
+
     pub_ = this->create_publisher<Image>("big_image", qos);
     timer_ = this->create_wall_timer(
       std::chrono::milliseconds(1000 / fps_),
